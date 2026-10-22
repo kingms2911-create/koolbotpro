@@ -10,6 +10,6 @@ RUN pip3 install --break-system-packages fastapi uvicorn google-generativeai pla
 RUN playwright install --with-deps chromium
 
 WORKDIR /app
-COPY agent.py server.py video_maker.py .
+COPY agent.py server.py .
 
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
